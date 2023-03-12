@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+}
+
+ button {
+  color: #19aae6;
+  background-color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 20px;
+  border: 2px solid #19aae6;
+  border-radius: 5px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+  border-radius: 25px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  background-color: #19aae6;
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: -1;
+  top: 100%;
+  left: 100%;
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: 0px 0px 20px 4px #19aae6;
+  color: white;
+} 
+
+button:hover::before {
+  top: -30px;
+  left: -30px;
+} 
+

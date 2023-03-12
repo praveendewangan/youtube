@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+}
+
+button {
+  color: #fd1a5d;
+  background-color: #000;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 20px;
+  border: 2px solid #fd1a5d;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+}
+
+button::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fd1a5d;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 100%;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+button:hover {
+  color: #000;
+}
+
+button:hover::before {
+  transform-origin: 0%;
+  transform: scaleX(1);
+}
